@@ -2,7 +2,7 @@
 
 require_once('connect.php');
 
-$req_insert_movies_directors = "INSERT INTO directors_has_infos_movies (directors_id, infos_movies_id) VALUES (:id_dir, :id_movies)";
+$req_insert_movies_directors = "INSERT INTO directors_has_infos_movies (`directors_id`, `infos_movies_id`) VALUES (:id_dir, :id_movies)";
 
 $req_select_id_movie = "SELECT id FROM infos_movies WHERE title = :title";
 $req_select_id_dir = "SELECT id FROM directors WHERE director_name = :dir_name";
