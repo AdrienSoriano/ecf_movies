@@ -4,7 +4,7 @@ require_once('connect.php');
 
 $req_insert_years = "INSERT INTO release_years (release_year) SELECT * FROM (SELECT :release_year AS release_year) AS temp WHERE NOT EXISTS ( SELECT release_year FROM release_years WHERE release_year = :release_year )";
 
-$req_year = $conn->prepare($req_insert_years);
+$req_year = $db->prepare($req_insert_years);
 
 $file = fopen('./film.csv','r');
 if ($file !==FALSE) {
