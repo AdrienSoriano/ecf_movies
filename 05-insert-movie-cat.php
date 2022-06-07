@@ -2,7 +2,7 @@
 
 require_once('connect.php');
 
-$req_insert_movies = "INSERT INTO categories_has_infos_movies (categories_id, infos_movies_id) VALUES (:id_cat, :id_movies)";
+$req_insert_movies = "INSERT INTO categories_has_infos_movies (`categories_id`, `infos_movies_id`) VALUES (:id_cat, :id_movies)";
 
 $req_select_id_movie = "SELECT id FROM infos_movies WHERE title = :title";
 $req_select_id_cat = "SELECT id FROM categories WHERE category = :cat";
