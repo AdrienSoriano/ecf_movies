@@ -2,7 +2,7 @@
 
 require_once('connect.php');
 
-$req_insert_categories = "INSERT INTO categories (category) SELECT * FROM (SELECT :category AS category) AS temp WHERE NOT EXISTS ( SELECT category FROM categories WHERE category = :category )";
+$req_insert_categories = "INSERT INTO categories (`category`) SELECT * FROM (SELECT :category AS `category`) AS temp WHERE NOT EXISTS ( SELECT `category` FROM categories WHERE `category` = :category )";
 
 $req_cat = $db->prepare($req_insert_categories);
 
