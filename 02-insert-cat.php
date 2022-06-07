@@ -4,7 +4,7 @@ require_once('connect.php');
 
 $req_insert_categories = "INSERT INTO categories (category) SELECT * FROM (SELECT :category AS category) AS temp WHERE NOT EXISTS ( SELECT category FROM categories WHERE category = :category )";
 
-$req_cat = $conn->prepare($req_insert_categories);
+$req_cat = $db->prepare($req_insert_categories);
 
 $file = fopen('./film.csv','r');
 if ($file !==FALSE) {
