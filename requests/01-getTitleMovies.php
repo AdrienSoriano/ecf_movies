@@ -6,6 +6,4 @@ include ('../connect.php');
 
 $get_movies_title = "SELECT title FROM infos_movies";
 $req_movie = $db->query($get_movies_title);
-    while($res=$req_movie->fetch()){
-        print_r($res['title']."\n");
-    }
+$res=$req_movie->fetch();
